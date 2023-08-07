@@ -1,12 +1,12 @@
 from setuptools import setup
 
-with open("README.md", "r") as readme:
-    long_description = readme.read()
+readme = open("README.md", "r") 
 
 setup(
-    name='GestionIncidencias',
-    packages=['GestionIncidencias'],
+    name='incidentsBug',
+    packages=['incidentsBug'],
     version='0.1',
+    long_description=readme.read(),
     description='Gestión de incidencias de tipo bug',
     author='daniela',
     author_email='daniela@dsinno.io',

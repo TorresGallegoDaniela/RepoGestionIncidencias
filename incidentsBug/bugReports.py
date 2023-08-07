@@ -3,7 +3,7 @@ import json        # To work with the JSON data format
 import traceback   # Functions to get information  about exceptions that are thrown during execution
 
 class BugReports:
-    def _init_(self, idProyect="", area="", title=""):
+    def __init__(self, idProyect="", area="", title=""):
         # Constructor of the class that initializes the idProject, area and title attributes.
         self.__idProyect = idProyect
         self.__area = area
@@ -25,12 +25,12 @@ class BugReports:
         # Method to report a bug type incident.
         try:
             # Check to make sure RabbitMQ credentials have been established before attempting to send a message
-            if not self._rabbitmq_user or not self.rabbitmq_password or not self.rabbitmq_host or not self._rabbitmq_queue:
+            if not self.__rabbitmq_user or not self.__rabbitmq_password or not self.__rabbitmq_host or not self.__rabbitmq_queue:
                 # If RabbitMQ credentials have not been previously set, raise a ValueError exception
                 raise ValueError("RabbitMQ credentials not set. Call set_rabbitmq_credentials() first")
 
             # Establish connection to RabbitMQ
-            credentials = pika.PlainCredentials(self._rabbitmq_user, self._rabbitmq_password)
+            credentials = pika.PlainCredentials(self.__rabbitmq_user , self.__rabbitmq_password)
             parameters = pika.ConnectionParameters(host=self.__rabbitmq_host, credentials=credentials)
             connection = pika.BlockingConnection(parameters)
             channel = connection.channel()
