@@ -10,7 +10,7 @@ setup(
     description='Gestión de incidencias de tipo bug',
     author='daniela',
     author_email='daniela@dsinno.io',
-    url='https://github.com/TorresGallegoDaniela/GestionIncidenciasTipoBug',
+    url='https://github.com/TorresGallegoDaniela/RepoGestionIncidencias',
     classifiers=[],
     license='MIT',
     install_requires=[
