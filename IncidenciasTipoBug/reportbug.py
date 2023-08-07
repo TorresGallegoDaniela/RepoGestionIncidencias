@@ -1,6 +1,6 @@
 import pika        # Allows to interact with RabbitMQ
 import json        # To work with the JSON data format
-import traceback   # Functions to get information about exceptions that are thrown during execution
+import traceback   # Functions to get information  about exceptions that are thrown during execution
 
 class ReportBug:
     def _init_(self, idProyect="", area="", title=""):
