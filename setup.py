@@ -4,8 +4,8 @@ with open("README.md", "r") as readme:
     long_description = readme.read()
 
 setup(
-    name='reportBug',
-    packages=['reportBug'],
+    name='GestionIncidencias',
+    packages=['GestionIncidencias'],
     version='0.1',
     description='Gestión de incidencias de tipo bug',
     author='daniela',

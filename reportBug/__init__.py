@@ -1,1 +1,0 @@
-from reportBug.reportbug import ReportBug

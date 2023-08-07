@@ -2,7 +2,7 @@ import pika        # Allows to interact with RabbitMQ
 import json        # To work with the JSON data format
 import traceback   # Functions to get information  about exceptions that are thrown during execution
 
-class ReportBug:
+class BugReports:
     def _init_(self, idProyect="", area="", title=""):
         # Constructor of the class that initializes the idProject, area and title attributes.
         self.__idProyect = idProyect
@@ -21,7 +21,7 @@ class ReportBug:
         self.__rabbitmq_host = host
         self.__rabbitmq_queue = queue
 
-    def reportbug(self):
+    def bugReports(self):
         # Method to report a bug type incident.
         try:
             # Check to make sure RabbitMQ credentials have been established before attempting to send a message

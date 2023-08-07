@@ -36,25 +36,25 @@ Para obtener más información sobre RabbitMQ y cómo usar la biblioteca `pika`,
 ## Sintaxis
 
 ```python
-from IncidenciasTipoBug.reportbug import ReportBug
+from GestionIncidencias.BugReports import BugReports
 
 # Crea una instancia de la clase `ReportBug`
-reportBugInstance = ReportBug(idProyecto="ID_PROYECTO", area="AREA", título="TITULO")
+bugReportsInstance = BugReports(idProyecto="ID_PROYECTO", area="AREA", título="TITULO")
 
 # Establece las credenciales de RabbitMQ
-reportBugInstance.setRabbitmqCredentials(username="TU_USUARIO", password="TU_CONTRASEÑA", host="DIRECCIÓN_DEL_SERVIDOR", queue="NOMBRE_DE_LA_COLA")
+bugReportsInstance.setRabbitmqCredentials(username="TU_USUARIO", password="TU_CONTRASEÑA", host="DIRECCIÓN_DEL_SERVIDOR", queue="NOMBRE_DE_LA_COLA")
 
 # Reporta un bug
-reportBugInstance.reportBug()
+bugReportsInstance.reportBug()
 ```
 
 ### Ejemplo
 
 ```python
-reportBugInstance = ReportBug(idProyecto="123456", area="desarrollo", título="Error en la función `foo()`")
-reportBugInstance.setRabbitmqCredentials(username="tu_usuario", password="tu_contraseña", host="dirección_del_servidor", queue="nombre_de_la_cola")
-reportBugInstance.reportBug()
+bugReportsInstance = BugReports(idProyecto="123456", area="desarrollo", título="Error en la función `foo()`")
+bugReportsInstance.setRabbitmqCredentials(username="tu_usuario", password="tu_contraseña", host="dirección_del_servidor", queue="nombre_de_la_cola")
+bugReportsInstance.bugReports()
 ```
 
 ### Excepciones
-Si hay algún error al reportar el bug, la función `reportBug()` arrojará una excepción.
+Si hay algún error al reportar el bug, la función `bugReports()` arrojará una excepción.
