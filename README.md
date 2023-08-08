@@ -36,7 +36,7 @@ Para obtener más información sobre RabbitMQ y cómo usar la biblioteca `pika`,
 ## Sintaxis
 
 ```python
-from GestionIncidencias.BugReports import BugReports
+from incidentsBug.bugReports import BugReports
 
 # Crea una instancia de la clase `ReportBug`
 bugReportsInstance = BugReports(idProyecto="ID_PROYECTO", area="AREA", título="TITULO")
@@ -45,7 +45,7 @@ bugReportsInstance = BugReports(idProyecto="ID_PROYECTO", area="AREA", título="
 bugReportsInstance.setRabbitmqCredentials(username="TU_USUARIO", password="TU_CONTRASEÑA", host="DIRECCIÓN_DEL_SERVIDOR", queue="NOMBRE_DE_LA_COLA")
 
 # Reporta un bug
-bugReportsInstance.reportBug()
+bugReportsInstance.bugReports()
 ```
 
 ### Ejemplo
